@@ -1,0 +1,134 @@
+// Background & Layout
+.hero-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    overflow: hidden;
+  }
+  
+  // Floating Logo in the Top Left
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    margin-top: 5px;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 115px; // Adjust as needed
+    height: 80px;
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  // Hero Content Styling
+  .hero-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+    margin-right: 400px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+    perspective: 1000px;
+    transform: rotateX(10deg);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  
+  .hero-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.4);
+  }
+  
+  .hero-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 75, 43, 0.6);
+  }
+  
+  // Floating 3D Shapes
+  .floating-shapes {
+    .shape {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 50%;
+      animation: floatAnimation 4s infinite ease-in-out alternate;
+    }
+  
+    .shape-1 {
+      top: 15%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+  
+    .shape-2 {
+      bottom: 20%;
+      right: 15%;
+      animation-delay: 1s;
+    }
+  
+    .shape-3 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      animation-delay: 2s;
+    }
+  }
+  
+  // Animations
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes floatAnimation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  

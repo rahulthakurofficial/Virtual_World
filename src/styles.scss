@@ -1,0 +1,127 @@
+$primary-color: #ffffff;
+$secondary-color: #dfd9ff;
+
+// $font-black: font-weight: 900;
+// $font-medium: font-weight: 500;
+
+$lg-text: 80px;
+$sm-text: 60px;
+$xs-text: 50px;
+$default-text: 40px;
+$lg-line-height: 98px;
+
+$sub-lg-text: 30px;
+$sub-sm-text: 26px;
+$sub-xs-text: 20px;
+$sub-default-text: 16px;
+$sub-lg-line-height: 40px;
+
+$section-md-text: 60px;
+$section-sm-text: 50px;
+$section-xs-text: 40px;
+$section-default-text: 30px;
+
+$padding-x-sm: 16px;
+$padding-x: 6px;
+$padding-y-sm: 16px;
+$padding-y: 6px;
+$padding-sm: 16px;
+$padding: 10px;
+
+.styles {
+  &--paddingX {
+    padding-left: $padding-x-sm;
+    padding-right: $padding-x-sm;
+
+    @media (max-width: 640px) {
+      padding-left: $padding-x;
+      padding-right: $padding-x;
+    }
+  }
+
+  &--paddingY {
+    padding-top: $padding-y-sm;
+    padding-bottom: $padding-y-sm;
+
+    @media (max-width: 640px) {
+      padding-top: $padding-y;
+      padding-bottom: $padding-y;
+    }
+  }
+
+  &--padding {
+    padding: $padding-sm $padding-x-sm;
+
+    @media (max-width: 640px) {
+      padding: $padding $padding-x;
+    }
+  }
+
+  &--heroHeadText {
+    color: $primary-color;
+    font-size: $lg-text;
+    line-height: $lg-line-height;
+    font-weight: 900;
+    margin-top: 2px;
+
+    @media (max-width: 1024px) {
+      font-size: $sm-text;
+    }
+
+    @media (max-width: 768px) {
+      font-size: $xs-text;
+    }
+
+    @media (max-width: 640px) {
+      font-size: $default-text;
+    }
+  }
+
+  &--heroSubText {
+    color: $secondary-color;
+    font-size: $sub-lg-text;
+    font-weight: 500;
+    line-height: $sub-lg-line-height;
+
+    @media (max-width: 1024px) {
+      font-size: $sub-sm-text;
+    }
+
+    @media (max-width: 768px) {
+      font-size: $sub-xs-text;
+    }
+
+    @media (max-width: 640px) {
+      font-size: $sub-default-text;
+    }
+  }
+
+  &--sectionHeadText {
+    color: $primary-color;
+    font-weight: 900;
+    font-size: $section-md-text;
+
+    @media (max-width: 1024px) {
+      font-size: $section-sm-text;
+    }
+
+    @media (max-width: 768px) {
+      font-size: $section-xs-text;
+    }
+
+    @media (max-width: 640px) {
+      font-size: $section-default-text;
+    }
+  }
+
+  &--sectionSubText {
+    text-transform: uppercase;
+    letter-spacing: wider;
+    font-size: 18px;
+    color: $secondary-color;
+
+    @media (max-width: 640px) {
+      font-size: 14px;
+    }
+  }
+}

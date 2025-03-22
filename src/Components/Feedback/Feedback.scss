@@ -1,0 +1,138 @@
+.feedback-3d-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    perspective: 1200px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* 3D Flip Card Effect */
+  .feedback-card {
+    width: 350px;
+    height: 420px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    
+    &.flipped {
+      transform: rotateY(180deg);
+    }
+  
+    .feedback-front,
+    .feedback-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+  
+    /* Front Side Styling */
+    .feedback-front {
+      background: white;
+      transform: rotateY(0deg);
+      
+      h2 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+  
+        input,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1rem;
+          transition: 0.3s ease-in-out;
+  
+          &:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+            transform: scale(1.02);
+          }
+        }
+  
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+  
+        /* Animated Button */
+        .animated-button {
+          background: linear-gradient(90deg, #4a90e2, #357abd);
+          color: white;
+          border: none;
+          padding: 12px;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+          overflow: hidden;
+          position: relative;
+  
+          &:hover {
+            background: linear-gradient(90deg, #357abd, #1e3c72);
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+          }
+  
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  
+    /* Back Side Styling */
+    .feedback-back {
+      background: #4a90e2;
+      color: white;
+      transform: rotateY(180deg);
+      text-align: center;
+      transition: transform 0.8s ease-in-out;
+  
+      h2 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  /* Floating Hover Animation */
+  .feedback-card:hover {
+    transform: translateY(-10px) rotateY(0);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
